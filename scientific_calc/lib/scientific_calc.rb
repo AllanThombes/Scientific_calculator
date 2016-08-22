@@ -22,7 +22,7 @@ class Calc
         when "^"
           then @@result = operation[0] ** operation[2]
         else
-          return puts "Operation not recognized"
+          return puts "Operation not recognized (type `help` if youy are lost)"
       end
       p @@result
   end
@@ -41,10 +41,27 @@ class Calc
           then @@result = Math::log(operation[1])
         when "exp"
           then @@result = Math::exp(operation[1])
+        when "base"
+          then
+          begin
+             return puts @@result.to_i.to_s(operation[1])
+          rescue
+            return puts "Operation not recognized (type `help` if youy are lost)"
+          end
         else
-          return puts "Operation not recognized"
+          return puts "Operation not recognized (type `help` if youy are lost)"
       end
       p @@result
+  end
+
+  def self.help
+    puts "Operations must be written like this: "
+    puts "ex: 1 + 1"
+    puts "Or like this: "
+    puts "ex: cos 3"
+    puts "Oparators recognized are: "
+    puts " `+` `-` `*` `/` `mod` `^` `cos` `sin` `tan` `log` `exp` `base`"
+    puts "Type `exit` to quit"
   end
 end
 

@@ -16,8 +16,10 @@ while command.chomp != "exit" do
   elsif operation.length == 2
     # if there is 2 operands we call advanced functions (cos, sin, tan, etc.)
       Calc.advanced(operation)
+  elsif operation.length == 1 && operation[0] == "help"
+      Calc.help
   else
-    puts "This operation isn't recognized by this calculator"
+    puts "This operation isn't recognized by this calculator  (type `help` if youy are lost)"
   end
   # we wait the next operation
   command = gets

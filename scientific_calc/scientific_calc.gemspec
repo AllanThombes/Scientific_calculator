@@ -6,11 +6,10 @@ require 'scientific_calc/version'
 Gem::Specification.new do |spec|
   spec.name          = "scientific_calc"
   spec.version       = ScientificCalc::VERSION
-  spec.authors       = ["thomas"]
-  spec.email         = ["thomas1.leblan@coding-academy.fr"]
+  spec.authors       = ["AllanThombes"]
+  spec.email         = ["allanthombes@yahoo.fr"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Scientific calculator}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
