@@ -10,8 +10,12 @@ Gem::Specification.new do |spec|
   spec.email         = ["allanthombes@yahoo.fr"]
 
   spec.summary       = %q{Scientific calculator}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "No"
   spec.license       = "MIT"
+
+  spec.cert_chain    = ['certs/gem-public_cert.pem']
+  spec.signing_key   = File.expand_path("~/.ssh/gem-private_key.pem")
+
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
