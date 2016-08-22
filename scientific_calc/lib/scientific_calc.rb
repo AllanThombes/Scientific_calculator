@@ -11,25 +11,12 @@ class Calc
       # we convert the first and last operand to float
       operation[0] = operation[0].to_f
       operation[2] = operation[2].to_f
-      case operation[1]
-        when "+"
-          then @@result = operation[0] + operation[2]
-        when "-"
-          then @@result = operation[0] - operation[2]
-        when "*"
-          then @@result = operation[0] * operation[2]
-        when "/"
-          then @@result = operation[0] / operation[2]
-        when "mod"
-          then @@result = operation[0] % operation[2]
-        when "^"
-          then @@result = operation[0] ** operation[2]
-        else
-          return puts "Operation not recognized (type `help` if youy are lost)".red
-      end
+      # this table make correspond user input in valid operands
+      check_table = { '+' => '+', '-' => '-', '*' => '*', '/' => '/', 'mod' => '%', '^' => '**', '**' => '**' }
+      @@result = operation[0].send check_table[operation[1]], operation[2] rescue puts "Operation not recognized (type `help` if youy are lost)".red
       puts "#{@@result}".yellow
   end
-  # function which do the basical operations
+  # function which do the advanced operations
   def self.advanced(operation)
       # we convert the second operand to float
       operation[1] = operation[1].to_f
