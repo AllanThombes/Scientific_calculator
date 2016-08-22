@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["allanthombes@yahoo.fr"]
 
   spec.summary       = %q{Scientific calculator}
-  spec.homepage      = "No"
+  spec.homepage      = "https://github.com/AllanThombes/Scientific_calculator/"
   spec.license       = "MIT"
 
   spec.cert_chain    = ['certs/gem-public_cert.pem']
