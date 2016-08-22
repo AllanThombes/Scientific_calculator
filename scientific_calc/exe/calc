@@ -1,3 +1,24 @@
 #!/usr/bin/env ruby
 
 require "../lib/scientific_calc"
+
+
+# ve wait operation from the user
+puts "Enter your calc: (type exit to quit)"
+command = gets
+while command.chomp != "exit" do
+
+  # we split the user's entry with spaces
+  operation = command.chomp.split(" ")
+  # if there is 3 operands we call basics functions (- + * / % and **)
+  if operation.length == 3
+      Calc.basics(operation)
+  elsif operation.length == 2
+    # if there is 2 operands we call advanced functions (cos, sin, tan, etc.)
+      Calc.advanced(operation)
+  else
+    puts "This operation isn't recognized by this calculator"
+  end
+  # we wait the next operation
+  command = gets
+end
