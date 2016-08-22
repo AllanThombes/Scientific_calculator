@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 
 require "../lib/scientific_calc"
-
+require 'colorize'
 
 # ve wait operation from the user
-puts "Enter your calc: (type exit to quit)"
+puts "Enter your calc: (type exit to quit)".green
 command = gets
 while command.chomp != "exit" do
 
@@ -19,7 +19,7 @@ while command.chomp != "exit" do
   elsif operation.length == 1 && operation[0] == "help"
       Calc.help
   else
-    puts "This operation isn't recognized by this calculator  (type `help` if youy are lost)"
+    puts "This operation isn't recognized by this calculator  (type `help` if youy are lost)".red
   end
   # we wait the next operation
   command = gets

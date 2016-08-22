@@ -1,5 +1,8 @@
 require "../lib/scientific_calc/version"
+require 'colorize'
 
+ #
+ # Class which contain the calculator functions
 class Calc
   @@result = 0
 
@@ -22,9 +25,9 @@ class Calc
         when "^"
           then @@result = operation[0] ** operation[2]
         else
-          return puts "Operation not recognized (type `help` if youy are lost)"
+          return puts "Operation not recognized (type `help` if youy are lost)".red
       end
-      p @@result
+      puts "#{@@result}".yellow
   end
   # function which do the basical operations
   def self.advanced(operation)
@@ -46,26 +49,21 @@ class Calc
           begin
              return puts @@result.to_i.to_s(operation[1])
           rescue
-            return puts "Operation not recognized (type `help` if youy are lost)"
+            return puts "Operation not recognized (type `help` if youy are lost)".red
           end
         else
-          return puts "Operation not recognized (type `help` if youy are lost)"
+          return puts "Operation not recognized (type `help` if youy are lost)".red
       end
-      p @@result
+      puts "#{@@result}".yellow
   end
 
   def self.help
-    puts "Operations must be written like this: "
-    puts "ex: 1 + 1"
-    puts "Or like this: "
-    puts "ex: cos 3"
-    puts "Oparators recognized are: "
-    puts " `+` `-` `*` `/` `mod` `^` `cos` `sin` `tan` `log` `exp` `base`"
-    puts "Type `exit` to quit"
+    puts "Operations must be written like this: ".green
+    puts "ex: 1 + 1".green
+    puts "Or like this: ".green
+    puts "ex: cos 3".green
+    puts "Oparators recognized are: ".green
+    puts " `+` `-` `*` `/` `mod` `^` `cos` `sin` `tan` `log` `exp` `base`".green
+    puts "Type `exit` to quit".green
   end
 end
-
-
-# module ScientificCalc
-#   # Your code goes here...
-# end
