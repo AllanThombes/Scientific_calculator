@@ -44,6 +44,7 @@ class Calc
       puts "#{@@result}".yellow
   end
 
+  #Function which display the commands to users
   def self.help
     puts "Operations must be written like this: ".green
     puts "ex: 1 + 1".green

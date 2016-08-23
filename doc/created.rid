@@ -1,4 +1,4 @@
-Mon, 22 Aug 2016 19:18:34 +0200
+Tue, 23 Aug 2016 09:11:57 +0200
 ./README.md	Mon, 22 Aug 2016 17:17:11 +0200
 ./scientific_calc/README.md	Mon, 22 Aug 2016 17:16:55 +0200
 ./scientific_calc/LICENSE.txt	Mon, 22 Aug 2016 14:06:04 +0200
@@ -6,13 +6,16 @@ Mon, 22 Aug 2016 19:18:34 +0200
 ./scientific_calc/bin/console	Mon, 22 Aug 2016 14:23:03 +0200
 ./scientific_calc/bin/setup	Mon, 22 Aug 2016 14:02:07 +0200
 ./scientific_calc/lib/scientific_calc/version.rb	Mon, 22 Aug 2016 14:21:28 +0200
-./scientific_calc/lib/scientific_calc.rb	Mon, 22 Aug 2016 19:17:50 +0200
+./scientific_calc/lib/scientific_calc.rb	Tue, 23 Aug 2016 09:11:47 +0200
 ./scientific_calc/CODE_OF_CONDUCT.md	Mon, 22 Aug 2016 14:02:07 +0200
-./scientific_calc/scientific_calc.gemspec	Mon, 22 Aug 2016 18:07:38 +0200
+./scientific_calc/scientific_calc.gemspec	Mon, 22 Aug 2016 22:42:55 +0200
 ./scientific_calc/exe/calc	Mon, 22 Aug 2016 19:13:38 +0200
 ./scientific_calc/Gemfile.lock	Mon, 22 Aug 2016 18:45:50 +0200
 ./scientific_calc/Gemfile	Mon, 22 Aug 2016 14:02:07 +0200
+./scientific_calc/test/scientific_calc.rb	Mon, 22 Aug 2016 23:04:46 +0200
 ./scientific_calc/spec/spec_helper.rb	Mon, 22 Aug 2016 14:02:07 +0200
 ./scientific_calc/spec/scienctific_calc_spec.rb	Mon, 22 Aug 2016 14:02:07 +0200
+./certs/gem-public_cert.pem	Mon, 22 Aug 2016 20:35:09 +0200
 ./Gemfile.lock	Mon, 22 Aug 2016 19:04:30 +0200
-./Gemfile	Mon, 22 Aug 2016 19:02:41 +0200
+./Gemfile	Tue, 23 Aug 2016 09:11:02 +0200
+./scientific_calc-0.1.0.gem	Mon, 22 Aug 2016 22:43:13 +0200

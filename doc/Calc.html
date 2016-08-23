@@ -125,13 +125,13 @@
 
         <div class="method-description">
           
-          <p>function which do the basical operations</p>
+          <p>function which do the advanced operations</p>
           
           
 
           
           <div class="method-source-code" id="advanced-source">
-            <pre><span class="ruby-comment"># File scientific_calc/lib/scientific_calc.rb, line 33</span>
+            <pre><span class="ruby-comment"># File scientific_calc/lib/scientific_calc.rb, line 20</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">advanced</span>(<span class="ruby-identifier">operation</span>)
     <span class="ruby-comment"># we convert the second operand to float</span>
     <span class="ruby-identifier">operation</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">operation</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_f</span>
@@ -192,22 +192,9 @@
     <span class="ruby-comment"># we convert the first and last operand to float</span>
     <span class="ruby-identifier">operation</span>[<span class="ruby-value">0</span>] = <span class="ruby-identifier">operation</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_f</span>
     <span class="ruby-identifier">operation</span>[<span class="ruby-value">2</span>] = <span class="ruby-identifier">operation</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">to_f</span>
-    <span class="ruby-keyword">case</span> <span class="ruby-identifier">operation</span>[<span class="ruby-value">1</span>]
-      <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;+&quot;</span>
-        <span class="ruby-keyword">then</span> <span class="ruby-identifier">@@result</span> = <span class="ruby-identifier">operation</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">operation</span>[<span class="ruby-value">2</span>]
-      <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;-&quot;</span>
-        <span class="ruby-keyword">then</span> <span class="ruby-identifier">@@result</span> = <span class="ruby-identifier">operation</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">operation</span>[<span class="ruby-value">2</span>]
-      <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;*&quot;</span>
-        <span class="ruby-keyword">then</span> <span class="ruby-identifier">@@result</span> = <span class="ruby-identifier">operation</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">*</span> <span class="ruby-identifier">operation</span>[<span class="ruby-value">2</span>]
-      <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;/&quot;</span>
-        <span class="ruby-keyword">then</span> <span class="ruby-identifier">@@result</span> = <span class="ruby-identifier">operation</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">/</span> <span class="ruby-identifier">operation</span>[<span class="ruby-value">2</span>]
-      <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;mod&quot;</span>
-        <span class="ruby-keyword">then</span> <span class="ruby-identifier">@@result</span> = <span class="ruby-identifier">operation</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">%</span> <span class="ruby-identifier">operation</span>[<span class="ruby-value">2</span>]
-      <span class="ruby-keyword">when</span> <span class="ruby-string">&quot;^&quot;</span>
-        <span class="ruby-keyword">then</span> <span class="ruby-identifier">@@result</span> = <span class="ruby-identifier">operation</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">**</span> <span class="ruby-identifier">operation</span>[<span class="ruby-value">2</span>]
-      <span class="ruby-keyword">else</span>
-        <span class="ruby-keyword">return</span> <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Operation not recognized (type `help` if youy are lost)&quot;</span>.<span class="ruby-identifier">red</span>
-    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># this table make correspond user input in valid operands</span>
+    <span class="ruby-identifier">check_table</span> = { <span class="ruby-string">&#39;+&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;+&#39;</span>, <span class="ruby-string">&#39;-&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;-&#39;</span>, <span class="ruby-string">&#39;*&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;*&#39;</span>, <span class="ruby-string">&#39;/&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;/&#39;</span>, <span class="ruby-string">&#39;mod&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;%&#39;</span>, <span class="ruby-string">&#39;^&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;**&#39;</span>, <span class="ruby-string">&#39;**&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;**&#39;</span> }
+    <span class="ruby-identifier">@@result</span> = <span class="ruby-identifier">operation</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">send</span> <span class="ruby-identifier">check_table</span>[<span class="ruby-identifier">operation</span>[<span class="ruby-value">1</span>]], <span class="ruby-identifier">operation</span>[<span class="ruby-value">2</span>] <span class="ruby-keyword">rescue</span> <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Operation not recognized (type `help` if youy are lost)&quot;</span>.<span class="ruby-identifier">red</span>
     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;#{@@result}&quot;</span>.<span class="ruby-identifier">yellow</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -233,13 +220,13 @@
 
         <div class="method-description">
           
-          
+          <p>Function which display the commands to users</p>
           
           
 
           
           <div class="method-source-code" id="help-source">
-            <pre><span class="ruby-comment"># File scientific_calc/lib/scientific_calc.rb, line 60</span>
+            <pre><span class="ruby-comment"># File scientific_calc/lib/scientific_calc.rb, line 48</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">help</span>
   <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Operations must be written like this: &quot;</span>.<span class="ruby-identifier">green</span>
   <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;ex: 1 + 1&quot;</span>.<span class="ruby-identifier">green</span>

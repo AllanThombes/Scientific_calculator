@@ -64,6 +64,8 @@
   
     <li><a href="../README_md.html">README</a>
   
+    <li><a href="../certs/gem-public_cert_pem.html">gem-public_cert.pem</a>
+  
     <li><a href="../scientific_calc/CODE_OF_CONDUCT_md.html">CODE_OF_CONDUCT</a>
   
     <li><a href="../scientific_calc/Gemfile.html">Gemfile</a>
@@ -99,8 +101,11 @@ unless $LOAD_PATH.include?(lib) require &#39;scientific_calc/version&#39;</p>
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">email</span>         = [<span class="ruby-string">&quot;allanthombes@yahoo.fr&quot;</span>]
 
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">summary</span>       = <span class="ruby-string">%q{Scientific calculator}</span>
-<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">homepage</span>      = <span class="ruby-string">&quot;TODO: Put your gem&#39;s website or public repo URL here.&quot;</span>
+<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">homepage</span>      = <span class="ruby-string">&quot;https://github.com/AllanThombes/Scientific_calculator/&quot;</span>
 <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">license</span>       = <span class="ruby-string">&quot;MIT&quot;</span>
+
+<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">cert_chain</span>    = [<span class="ruby-string">&#39;certs/gem-public_cert.pem&#39;</span>]
+<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">signing_key</span>   = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-string">&quot;~/.ssh/gem-private_key.pem&quot;</span>)
 
 <span class="ruby-comment"># Prevent pushing this gem to RubyGems.org. To allow pushes either set the &#39;allowed_push_host&#39;</span>
 <span class="ruby-comment"># to allow pushing to a single host or delete this section to allow pushing to any host.</span>
